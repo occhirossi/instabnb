@@ -2,9 +2,19 @@
     <div class="nav-wrapper  blue darken-3">
         <a href="#!" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="{{ path('home') }}">home</a></li>
-            <li><a href="{{ path('annoucements') }}">list</a></li>
-            <li><a href="{{ path('annoucementsAdd') }}">create</a></li>
+            <li><a href="{{ path('home') }}">{{ "nav.home"|trans({}, 'messages') }}</a></li>
+            <li><a href="{{ path('annoucements') }}">{{ "nav.list"|trans({}, 'messages') }}</a></li>
+            <li><a href="{{ path('annoucementsAdd') }}">{{ "nav.create"|trans({}, 'messages') }}</a></li>
+
+
+            <li><a href="{{ path('security_registration') }}">{{ "nav.signIn"|trans({}, 'messages') }}</a></li>
+            {% if app.user  %}
+                <li><a href="{{ path('app_logout') }}">{{ "nav.deconnexion"|trans({}, 'messages') }}</a></li>
+            {% else %}
+                <li><a href="{{ path('app_login') }}">{{ "nav.connexion"|trans({}, 'messages') }}</a></li>
+            {% endif %}
+
+
 
         </ul>
     </div>

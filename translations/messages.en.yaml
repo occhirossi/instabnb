@@ -1,0 +1,29 @@
+annoncementsAdd:
+  Title: 'Title'
+  content: 'Content'
+  price: 'Price'
+  SAVE: 'Save'
+
+nav:
+  home: 'home'
+  list: 'list'
+  create: 'create'
+  connexion: 'connection'
+  deconnexion: 'logout'
+  signIn: 'Sign in'
+
+button:
+  detail: 'detail'
+  list: 'liste'
+
+login:
+  login: 'Please sign in'
+  ok: 'You are logged in as'
+  password: 'password'
+  submit: 'Sign in'
+
+
+
+
+
+

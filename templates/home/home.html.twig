@@ -5,20 +5,18 @@
 
         <div style="text-align: center" class="row">
             {% for tableau in tableau %}
-                <div></div>
                 <div class="col s8 m6">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
-                            <p>
-                                {{ tableau.id }}<br/>
-                                {{ tableau.title }}<br/>
+
+                            <p> {{ tableau.id }}<br/>
+                                {{ tableau.title }}<br>
                                 {{ tableau.content }}<br/>
                                 {{ tableau.price }}<br/>
-                                {{ tableau.createdDate }}<br/>
-                            </p>
+                                {{ tableau.createdAt | date("m/d/Y") }}</p><br/>
                             <a href="{{ path('annoncementsDetail',{'id':tableau.id}) }}"
-                               class="waves-effect waves-light btn">detail</a>
-                            <a href="{{ path('annoucements') }}" class="waves-effect waves-light btn">Voir list</a>
+                               class="waves-effect waves-light btn">{{ "button.detail"|trans({}, 'messages') }}</a>
+                            <a href="{{ path('annoucements') }}" class="waves-effect waves-light btn">{{ "button.list"|trans({}, 'messages') }}</a>
                         </div>
                     </div>
                 </div>
